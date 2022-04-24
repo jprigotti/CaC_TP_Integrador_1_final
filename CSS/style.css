@@ -269,6 +269,10 @@ html{
   font-size: 1rem;
 }
 
+.form .title .underline{
+  text-decoration: underline dotted var(--gray-800);
+}
+
 .form .container-form {
   width: 50vw;
   margin: 0 auto;

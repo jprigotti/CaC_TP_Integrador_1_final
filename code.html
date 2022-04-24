@@ -515,6 +515,10 @@
     font-size: 1rem;
 }
 
+.form .title .underline{
+    text-decoration: underline dotted var(--gray-800);
+  }
+  
 .form .container-form {
     width: 50vw;
     margin: 0 auto;
@@ -638,6 +642,119 @@
 }
      </pre>
                     </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Media Queries
+                </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body accordion-flex">
+
+                    <div>
+                        <pre>
+                            /* ****************************************************** */
+                            /* MEDIA QUERIES */
+                            /* ****************************************************** */
+                            
+                            /* MEDIA QUERIES LG 992*/
+                            @media(max-width: 992px) {
+                              .showcase .content {
+                                width: 100%;
+                                margin-bottom: 20vh;
+                                text-align: center;
+                              }
+                            
+                              .showcase .buttonarea {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                              }
+                            
+                              .form .container-form {
+                                width: 65vw;
+                              }
+                            
+                            }
+                            
+                            /* MEDIA QUERIES MD 768*/
+                            @media(max-width: 768px) {
+                              .container-cta {
+                                display: flex;
+                                flex-direction: column;
+                              }
+                            
+                              .container-cta img {
+                                width: 100vw;
+                              }
+                            
+                              .container-cta .cta-content>* {
+                                display: block;
+                                text-align: center !important;
+                              }
+                            
+                              .cta-content .btn {
+                                width: 50%;
+                                margin: 0 auto;
+                              }
+                            
+                              .form .container-form .first-last-name {
+                                width: 100%;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                margin-bottom: 1rem;
+                              }
+                            
+                              .form .container-form .first-last-name .input-name {
+                                width: 100%;
+                                margin-bottom: 1rem;
+                              }
+                            
+                              .form .container-form {
+                                width: 80vw;
+                              }
+                            
+                              .footer {
+                                background-image: linear-gradient(to bottom, #004d7a, #008793);
+                              }
+                            
+                              .footer .container-footer {
+                                flex-direction: column;
+                                padding: 1rem 0;
+                               }
+                            
+                               .footer .container-footer a {
+                                padding: 0.5rem 0;
+                                width: 100%;
+                                text-align: center;
+                              }
+                            
+                            }
+                            
+                            
+                            /* MEDIA QUERIES SM 576*/
+                            @media(max-width: 576px) {
+                              .showcase .buttonarea {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                              }
+                            
+                            }
+      </pre>
+                    </div>
+
 
 
                 </div>
