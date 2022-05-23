@@ -16,7 +16,9 @@
 
     <!-- Link Fontawesome -->
     <script src="https://kit.fontawesome.com/628afeffd4.js" crossorigin="anonymous"></script>
-
+    
+     <!-- Link VUE -->
+    <script src="https://unpkg.com/vue@3"></script>
 </head>
 
 
@@ -37,7 +39,7 @@
                     <a class="nav-link active" href="#" aria-current="page" href="#">La conferencia</a>
                     <a class="nav-link" href="#speakers">Los oradores</a>
                     <a class="nav-link" href="#">El lugar y la fecha</a>
-                    <a class="nav-link" href="#form">Conviertete en orador</a>
+                    <a class="nav-link" href="#orador">Conviertete en orador</a>
                     <a class="nav-link" href="#tickets">Comprar tickets</a>
                 </div>
             </div>
@@ -58,7 +60,7 @@
                         tenemos
                         para ti. Te esperamos!</p>
                     <div class="buttonarea">
-                        <a class="btn btn-transparent" href="#">Quiero ser orador</a>
+                        <a class="btn btn-transparent" href="#orador">Quiero ser orador</a>
                         <a class="btn btn-solid" href="#tickets">Comprar tickets</a>
                     </div>
                 </div>
@@ -125,7 +127,7 @@
 
 
     <!-- FORM -->
-    <section class="form" id="form">
+    <section class="form" id="orador">
         <div class="title">
             <h6>CONVIERTETE EN UN</h6>
             <h2>ORADOR</h2>
@@ -175,7 +177,7 @@
             </div>
 
 
-            <form action="">
+            <form class="ticketsForm" action="">
                 <div class="tickets-form">
                     <input type="text" class="ticketsFirstName" name="Nombre" placeholder="Nombre">
                     <input type="text" class="ticketsLastName" name="Apellido" placeholder="Apellido">

@@ -28,6 +28,7 @@ discountJunior.addEventListener("click", updateCategory);
 
 
 
+
 // ******* FUNCION TICKETSPRICE *****************
 function ticketsPrice(evento) {
     //Usamos preventDefault() para que no se refresque el formulario
@@ -56,6 +57,17 @@ function ticketsPrice(evento) {
         }
 
         document.querySelector(".ticketsOutput").textContent = `Total a pagar: $${totalPayment}`;
+        let outputNode = document.querySelector(".ticketsOutput");
+        let spanNode = document.createElement("span");
+        spanNode.className = 'ticketsBuy';
+        let textNode = document.createTextNode("Comprar");
+        spanNode.append(textNode);
+        outputNode.append(spanNode);
+
+        //eventlistener para detectar click en el span ticketsBuy
+        let ticketsBuy = document.querySelector(".ticketsBuy");
+        ticketsBuy.addEventListener("click", ticketsSubmit);
+
     } else {
         document.querySelector(".ticketsQuantity").style.border = "2px solid red";
         ticketsQuantity.value = "";
@@ -66,11 +78,17 @@ function ticketsPrice(evento) {
 
 // ******* FUNCION BORRAROUTPUT *****************
 function borrarOutput() {
+
     document.querySelector(".ticketsOutput").textContent = "Total a pagar:"
 
+    let form = document.querySelector(".ticketsForm");
+    for (i = 0; i < 4; i++) {
+        document.querySelector("." + form[i].className).style.border = "1px solid var(--gray-300)";
+    }
 }
 
-// ******* FUNCION APPLYDISCOUNT *****************
+
+// ******* FUNCION APDATECATEGORY *****************
 function updateCategory(evento) {
     // console.log(document.querySelector(".ticketsCategory"));
     let categoria = evento.target.parentNode.className;
@@ -100,6 +118,41 @@ function updateCategory(evento) {
             document.querySelector(".junior").style.backgroundColor = "#f2f2f2";
             break;
         }
+    }
+}
+
+
+// ******* FUNCION CELARINPUT *****************
+function ticketsSubmit() {
+
+    let form = document.querySelector(".ticketsForm");
+
+    inputCheck(form);
+
+    function inputCheck(form) {
+        let arrayCheck = [];
+        for (i = 0; i < 3; i++) {
+            arrayCheck[i] = form[i].value;
+            if (form[i].value == "") {
+                document.querySelector("." + form[i].className).style.border = "2px solid red";
+            } else {
+                document.querySelector("." + form[i].className).style.border = "1px solid var(--gray-300)";
+            }
+        }
+
+        if (arrayCheck.every(element => element != "")) {
+            if (form[2].value.includes('@') && form[2].value.includes('.')) {
+                alert("Formulario enviado");
+                form.submit();
+                document.querySelector("." + form[2].className).style.border = "1px solid var(--gray-300)";
+            } else {
+                alert("Debe ingresar un correo válido");
+                document.querySelector("." + form[2].className).style.border = "2px solid red"
+            }
+        } else {
+            alert("Completar los campos en rojo");
+        }
+
     }
 }
 
@@ -133,3 +186,5 @@ function descuento(evento) {
         }
     }
 }
+
+

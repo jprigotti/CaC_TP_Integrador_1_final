@@ -468,11 +468,10 @@ float: right;
 cursor: pointer;
 }
 
-/* .tickets-form .ticketsOutput::before {
+.tickets-form .ticketsBuy::after {
   font: var(--fa-font-solid);
-  content: "\f07a  ";
-  float: right;
-} */
+  content: "\f07a";
+}
 
 
 .tickets-form .btnTickets {
