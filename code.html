@@ -584,17 +584,465 @@
 
     </div>
 
-    <iframe class="footer-iframe" src="footer.html" frameborder="0"></iframe>
-
+    <iframe class="form-iframe" src="tickets.html" frameborder="0"></iframe>
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
                     aria-expanded="true" aria-controls="collapseOne">
-                    Footer code HTML / CSS
+                    Tickets code HTML / CSS
                 </button>
             </h2>
             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body accordion-flex">
+
+                    <div>
+                        <pre>
+                            &lt!-- TICKETS --&gt
+
+                            &ltdiv id="tickets" class="tickets"&gt
+                                &ltdiv class="container-tickets"&gt
+                                    &ltdiv class="tickets-category"&gt
+                                        &ltdiv class="estudiante"&gt
+                                            &lth3&gtEstudiante&lt/h3&gt
+                                            &lth5&gtTiene un descuento&lt/h5&gt
+                                            &lth2&gt80%&lt/h2&gt
+                                            &lth6&gt* presentar documentación&lt/h6&gt
+                                        &lt/div&gt
+                                        &ltdiv class="trainee"&gt
+                                            &lth3&gtTrainee&lt/h3&gt
+                                            &lth5&gtTiene un descuento&lt/h5&gt
+                                            &lth2&gt50%&lt/h2&gt
+                                            &lth6&gt* presentar documentación&lt/h6&gt
+                                        &lt/div&gt
+                                        &ltdiv class="junior"&gt
+                                            &lth3&gtJunior&lt/h3&gt
+                                            &lth5&gtTiene un descuento&lt/h5&gt
+                                            &lth2&gt15%&lt/h2&gt
+                                            &lth6&gt* presentar documentación&lt/h6&gt
+                                        &lt/div&gt
+                                    &lt/div&gt
+                                    &ltdiv class="tickets-text"&gt
+                                        &lth6&gtVENTA&lt/h6&gt
+                                        &lth1&gtVALOR DE TICKET $200&lt/h1&gt
+                                    &lt/div&gt
+                        
+                        
+                                    &ltform class="ticketsForm" action=""&gt
+                                        &ltdiv class="tickets-form"&gt
+                                            &ltinput type="text" class="ticketsFirstName" name="Nombre" placeholder="Nombre"&gt
+                                            &ltinput type="text" class="ticketsLastName" name="Apellido" placeholder="Apellido"&gt
+                                            &ltinput type="email" class="ticketsEmail" name="Email" placeholder="E-mail"&gt
+                                            &ltdiv class="labelTicketsQuantity"&gt
+                                                &ltlabel for="Cantidad"&gtCantidad&lt/label&gt
+                                                &ltinput id="ticketsQuantity" type="text" class="ticketsQuantity" name="Cantidad"
+                                                    placeholder="Cantidad"&gt
+                                            &lt/div&gt
+                                            &ltdiv class="labelTicketsCategory"&gt
+                                                &ltlabel for="Categoria"&gtCategoria&lt/label&gt
+                                                &ltselect name="Categoria" class="ticketsCategory"&gt
+                                                    &ltoption value="Estudiante"&gtEstudiante&lt/option&gt
+                                                    &ltoption value="Trainee"&gtTrainee&lt/option&gt
+                                                    &ltoption value="Junior"&gtJunior&lt/option&gt
+                                                &lt/select&gt
+                                            &lt/div&gt
+                                            &lt!-- &ltoutput class="ticketsOutput"&gt&ltspan class="ticketsValue"&gtTotal a pagar: &lt/span&gt&ltspan class="ticketsBuy"&gt&lti class="fa-solid fa-cart-shopping"&gt&lt/i&gt Comprar&lt/span&gt&lt/output&gt --&gt
+                                            &ltoutput class="ticketsOutput"&gt&ltspan class="ticketsValue"&gtTotal a pagar: &lt/span&gt&lt/output&gt
+                                            &ltbutton id="ticketsBorrar" type="reset" class="btnTickets" name="Borrar"&gtBorrar&lt/button&gt
+                                            &ltbutton id="ticketsResumen" class="btnTickets" name="Resumen"&gtResumen&lt/button&gt
+                                        &lt/div&gt
+                                    &lt/form&gt
+                        
+                                &lt/div&gt
+                            &lt/div&gt
+                        
+      </pre>
+                    </div>
+                    <div>
+                        <pre>
+                            /* TICKETS */
+                            .tickets .container-tickets {
+                              width: 90%;
+                              max-width: 800px;
+                              margin: 0 auto;
+                            }
+                            
+                            .tickets-category {
+                              display: flex;
+                              justify-content: space-evenly;
+                              flex-wrap: wrap;
+                              margin: 1rem;
+                            }
+                            
+                            .tickets-category .estudiante,
+                            .trainee,
+                            .junior {
+                              width: 30%;
+                              min-width: 180px;
+                              text-align: center;
+                              padding: 0.5rem;
+                              margin: 0.5rem 0.5rem;
+                              box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+                              cursor: pointer;
+                            }
+                            
+                            .tickets-category .estudiante:hover,
+                            .trainee:hover,
+                            .junior:hover {
+                              transform: scale(0.97);
+                            }
+                            
+                            .tickets-category h2 {
+                              font-size: 1.5rem;
+                            
+                            }
+                            
+                            .tickets-category h3 {
+                              font-size: 1.2rem;
+                              font-weight: 600;
+                            }
+                            
+                            .tickets-category h5 {
+                              font-size: 1rem;
+                              color: var(--gray-700);
+                            }
+                            
+                            .tickets-category h6 {
+                              font-size: 0.7rem;
+                              color: var(--gray-600);
+                            }
+                            
+                            .tickets-category .estudiante {
+                              border-radius: 5px;
+                              border: 2px solid blue;
+                            }
+                            
+                            
+                            .tickets-category .trainee {
+                              border-radius: 5px;
+                              border: 2px solid green;
+                            }
+                            
+                            .tickets-category .junior {
+                              border-radius: 5px;
+                              border: 2px solid orange;
+                            }
+                            
+                            
+                            .container-tickets .tickets-text {
+                              text-align: center;
+                            }
+                            
+                            .tickets-form {
+                              display: flex;
+                              justify-content: space-between;
+                              flex-wrap: wrap;
+                            }
+                            
+                            .tickets-form .ticketsFirstName,
+                            .ticketsLastName {
+                              width: 49%;
+                              margin: 0.5rem 0;
+                              border-radius: 3px;
+                              border: 1px solid var(--gray-300);
+                              padding: 5px;
+                            }
+                            
+                            .tickets-form .ticketsEmail {
+                              width: 100%;
+                              border-radius: 3px;
+                              border: 1px solid var(--gray-300);
+                              padding: 4px;
+                            }
+                            
+                            .tickets-form .labelTicketsQuantity,
+                            .labelTicketsCategory {
+                              width: 49%;
+                              margin: 0.5rem 0;
+                            }
+                            
+                            .tickets-form .ticketsQuantity,
+                            .ticketsCategory {
+                              width: 100%;
+                              border-radius: 3px;
+                              border: 1px solid var(--gray-300);
+                              padding: 4px;
+                            }
+                            
+                            .tickets-form .ticketsCategory {
+                              background-color: transparent;
+                              color: var(--gray-600);
+                            }
+                            
+                            
+                            .tickets-form .ticketsOutput {
+                              width: 100%;
+                              background-color: rgb(155, 200, 222);
+                              border-radius: 3px;
+                              border: none;
+                              padding: 10px;
+                              color: var(--gray-900);
+                            }
+                            
+                            .ticketsOutput .ticketsValue {
+                              float: left;
+                              }
+                            
+                            .ticketsOutput .ticketsBuy {
+                            float: right;
+                            cursor: pointer;
+                            }
+                            
+                            .tickets-form .ticketsBuy::after {
+                              font: var(--fa-font-solid);
+                              content: "\f07a";
+                            }
+                            
+                            
+                            .tickets-form .btnTickets {
+                              width: 49%;
+                              background-color: #009349;
+                              color: var(--gray-100);
+                              margin: 0.5rem 0;
+                              padding: 0.5rem 1rem;
+                              border-radius: 5px;
+                              border: none;
+                            }
+     </pre>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Tickets code JAVASCRIPT
+                </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body accordion-flex">
+
+                    <div>
+                        <pre>
+&lt!-- JAVASCRIPT TICKETS --&gt
+                            
+// ****** VARIABLES ***********
+
+//evenlistener para detectar cuando hacen click en Button Resumen
+let ticketsResumen = document.querySelector("#ticketsResumen");
+ticketsResumen.addEventListener("click", ticketsPrice);
+
+//evenlistener para detectar cuando hacen click en el Button Borrar
+let ticketsBorrar = document.querySelector("#ticketsBorrar");
+ticketsBorrar.addEventListener("click", borrarOutput);
+
+//evenlistener para detectar cuando hacen click en el input Cantidad
+let ticketsQuantity = document.querySelector(".ticketsQuantity");
+ticketsQuantity.addEventListener("click", clearInput);
+
+//evenlistener para detectar cuando hacen click en el input Categoria
+let ticketsCategory = document.querySelector(".ticketsCategory");
+ticketsCategory.addEventListener("click", descuento);
+
+
+//eventlistener para detectar click en los div estudiante/trainee/junior
+let discountStudent = document.querySelector(".estudiante");
+discountStudent.addEventListener("click", updateCategory);
+let discountTrainee = document.querySelector(".trainee");
+discountTrainee.addEventListener("click", updateCategory);
+let discountJunior = document.querySelector(".junior");
+discountJunior.addEventListener("click", updateCategory);
+
+
+
+
+// ******* FUNCION TICKETSPRICE *****************
+function ticketsPrice(evento) {
+    //Usamos preventDefault() para que no se refresque el formulario
+    evento.preventDefault();
+
+    //leemos el valor del input cantidad
+    let ticketsQuantity = document.querySelector(".ticketsQuantity");
+
+    if (Number(ticketsQuantity.value)) {
+        let ticketsCategory = document.querySelector(".ticketsCategory");
+        let totalPayment;
+
+        switch (ticketsCategory.value) {
+            case "Estudiante": {
+                totalPayment = 200 * ticketsQuantity.value * 0.2;
+                break;
+            }
+            case "Trainee": {
+                totalPayment = 200 * ticketsQuantity.value * 0.5;
+                break;
+            }
+            case "Junior": {
+                totalPayment = 200 * ticketsQuantity.value * 0.85;
+                break;
+            }
+        }
+
+        document.querySelector(".ticketsOutput").textContent = `Total a pagar: $${totalPayment}`;
+        let outputNode = document.querySelector(".ticketsOutput");
+        let spanNode = document.createElement("span");
+        spanNode.className = 'ticketsBuy';
+        let textNode = document.createTextNode("Comprar");
+        spanNode.append(textNode);
+        outputNode.append(spanNode);
+
+        //eventlistener para detectar click en el span ticketsBuy
+        let ticketsBuy = document.querySelector(".ticketsBuy");
+        ticketsBuy.addEventListener("click", ticketsSubmit);
+
+    } else {
+        document.querySelector(".ticketsQuantity").style.border = "2px solid red";
+        ticketsQuantity.value = "";
+        ticketsQuantity.placeholder = "Ingrese una cantidad";
+    }
+
+}
+
+// ******* FUNCION BORRAROUTPUT *****************
+function borrarOutput() {
+
+    document.querySelector(".ticketsOutput").textContent = "Total a pagar:"
+
+    let form = document.querySelector(".ticketsForm");
+    for (i = 0; i &lt 4; i++) {
+        document.querySelector("." + form[i].className).style.border = "1px solid var(--gray-300)";
+    }
+}
+
+
+// ******* FUNCION APDATECATEGORY *****************
+function updateCategory(evento) {
+    // console.log(document.querySelector(".ticketsCategory"));
+    let categoria = evento.target.parentNode.className;
+
+    switch (categoria) {
+        case "estudiante": {
+            console.log("es estudiante");
+            document.querySelector(".ticketsCategory").options.selectedIndex = 0;
+            document.querySelector(".estudiante").style.backgroundColor = "#f2f2f2";
+            document.querySelector(".trainee").style.backgroundColor = "transparent";
+            document.querySelector(".junior").style.backgroundColor = "transparent";
+            break;
+        }
+        case "trainee": {
+            console.log("es trainee");
+            document.querySelector(".ticketsCategory").options.selectedIndex = 1;
+            document.querySelector(".estudiante").style.backgroundColor = "transparent";
+            document.querySelector(".trainee").style.backgroundColor = "#f2f2f2";
+            document.querySelector(".junior").style.backgroundColor = "transparent";
+            break;
+        }
+        case "junior": {
+            console.log("es junior");
+            document.querySelector(".ticketsCategory").options.selectedIndex = 2;
+            document.querySelector(".estudiante").style.backgroundColor = "transparent";
+            document.querySelector(".trainee").style.backgroundColor = "transparent";
+            document.querySelector(".junior").style.backgroundColor = "#f2f2f2";
+            break;
+        }
+    }
+}
+
+
+// ******* FUNCION CELARINPUT *****************
+function ticketsSubmit() {
+
+    let form = document.querySelector(".ticketsForm");
+
+    inputCheck(form);
+
+    function inputCheck(form) {
+        let arrayCheck = [];
+        for (i = 0; i &lt 3; i++) {
+            arrayCheck[i] = form[i].value;
+            if (form[i].value == "") {
+                document.querySelector("." + form[i].className).style.border = "2px solid red";
+            } else {
+                document.querySelector("." + form[i].className).style.border = "1px solid var(--gray-300)";
+            }
+        }
+
+        if (arrayCheck.every(element => element != "")) {
+            if (form[2].value.includes('@') && form[2].value.includes('.')) {
+                alert("Formulario enviado");
+                form.submit();
+                document.querySelector("." + form[2].className).style.border = "1px solid var(--gray-300)";
+            } else {
+                alert("Debe ingresar un correo válido");
+                document.querySelector("." + form[2].className).style.border = "2px solid red"
+            }
+        } else {
+            alert("Completar los campos en rojo");
+        }
+
+    }
+}
+
+// ******* FUNCION CELARINPUT *****************
+function clearInput(evento) {
+    // console.log(evento.target.className);
+    document.querySelector("." + evento.target.className).style.border = "1px solid var(--gray-300)";
+}
+
+// ******* FUNCION DESCUENTO *****************
+function descuento(evento) {
+    // console.log(typeof(evento.target.value));
+    switch (evento.target.value) {
+        case "Estudiante": {
+            document.querySelector(".estudiante").style.backgroundColor = "#f2f2f2";
+            document.querySelector(".trainee").style.backgroundColor = "transparent";
+            document.querySelector(".junior").style.backgroundColor = "transparent";
+            break;
+        }
+        case "Trainee": {
+            document.querySelector(".estudiante").style.backgroundColor = "transparent";
+            document.querySelector(".trainee").style.backgroundColor = "#f2f2f2";
+            document.querySelector(".junior").style.backgroundColor = "transparent";
+            break;
+        }
+        case "Junior": {
+            document.querySelector(".estudiante").style.backgroundColor = "transparent";
+            document.querySelector(".trainee").style.backgroundColor = "transparent";
+            document.querySelector(".junior").style.backgroundColor = "#f2f2f2";
+            break;
+        }
+    }
+}
+                       
+      </pre>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <iframe class="footer-iframe" src="footer.html" frameborder="0"></iframe>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Footer code HTML / CSS
+                </button>
+            </h2>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body accordion-flex">
 
@@ -766,6 +1214,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
