@@ -31,6 +31,7 @@ discountJunior.addEventListener("click", updateCategory);
 
 // ******* FUNCION TICKETSPRICE *****************
 function ticketsPrice(evento) {
+    console.log(evento);
     //Usamos preventDefault() para que no se refresque el formulario
     evento.preventDefault();
 
@@ -71,7 +72,8 @@ function ticketsPrice(evento) {
     } else {
         document.querySelector(".ticketsQuantity").style.border = "2px solid red";
         ticketsQuantity.value = "";
-        ticketsQuantity.placeholder = "Ingrese una cantidad";
+        ticketsQuantity.placeholder = "Ingrese una cantidad válida";
+        alert("Ingrese una cantidad válida");
     }
 
 }
@@ -79,7 +81,7 @@ function ticketsPrice(evento) {
 // ******* FUNCION BORRAROUTPUT *****************
 function borrarOutput() {
 
-    document.querySelector(".ticketsOutput").textContent = "Total a pagar:"
+    document.querySelector(".ticketsOutput").textContent = "Total a pagar:";
 
     let form = document.querySelector(".ticketsForm");
     for (i = 0; i < 4; i++) {
@@ -122,11 +124,11 @@ function updateCategory(evento) {
 }
 
 
-// ******* FUNCION CELARINPUT *****************
+// ******* FUNCION TICKETSSUBMIT *****************
 function ticketsSubmit() {
 
     let form = document.querySelector(".ticketsForm");
-
+console.log(form);
     inputCheck(form);
 
     function inputCheck(form) {
@@ -139,6 +141,7 @@ function ticketsSubmit() {
                 document.querySelector("." + form[i].className).style.border = "1px solid var(--gray-300)";
             }
         }
+
 
         if (arrayCheck.every(element => element != "")) {
             if (form[2].value.includes('@') && form[2].value.includes('.')) {

@@ -23,4 +23,7 @@ Se grabaron 9 videos, el primero es una Intro, y los sucesivos muestran como hac
 
 <hr>
 Mayo 25, 2022 se agregó la sección Tickets a index.html y code.html
+<ul>
+<li>Video 10: Tickets section con JavaScript https://www.youtube.com/watch?v=AD71yUacREA&list=PLryrs3RkRBTBamEuAc1k1laYmaz8-G50P&index=10</li>
+</ul>
 
