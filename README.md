@@ -21,3 +21,6 @@ Se grabaron 9 videos, el primero es una Intro, y los sucesivos muestran como hac
   <li>Video 9: Github Part2 https://youtu.be/uEXoUa6NQ60</li>
 
 
+<hr>
+Mayo 25, 2022 se agregó la sección Tickets a index.html y code.html
+
